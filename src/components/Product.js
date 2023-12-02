@@ -13,7 +13,7 @@ import MainTable from './MainTable';
 export const Product = () => {
     const pcolumnTitles = ['Product Code', 'Product Name', 'Product Quantity', 'Product_price'];
     const ptableCaption = 'Product table';
-    const purl = 'http://localhost:3000/productItems';
+    const purl = 'https://grocery-store-server-u9gz.onrender.com/productItems';
 
 return (
 <ChakraProvider>
