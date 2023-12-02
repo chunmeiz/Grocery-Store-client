@@ -53,7 +53,7 @@ export function AddEmployee() {
             Password:data.Password,
           }
           console.log(sendData);
-          fetch('http://localhost:3000/employeeItems',{
+          fetch('https://grocery-store-server-u9gz.onrender.com/employeeItems',{
               method:"POST",
               body:JSON.stringify(sendData),
               headers:{
