@@ -18,7 +18,7 @@ export const ProductTable = () => {
   
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/productItems"); 
+      const response = await fetch("https://grocery-store-server-u9gz.onrender.com/productItems"); 
       const data = await response.json();
       console.log(data);
       
@@ -34,7 +34,7 @@ export const ProductTable = () => {
     console.log(deletedProduct._id);
     console.log(token);
    
-    fetch(`http://localhost:3000/productItems/${deletedProduct._id}`,{
+    fetch(`https://grocery-store-server-u9gz.onrender.com/productItems/${deletedProduct._id}`,{
       method:"Delete",
       headers:{
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const ProductTable = () => {
        return;
      }
   if (token) {
-    fetch(`http://localhost:3000/productItems/${editedProduct._id}`,{
+    fetch(`https://grocery-store-server-u9gz.onrender.com/productItems/${editedProduct._id}`,{
         method:"PUT",
         body:JSON.stringify(
           editedProduct
