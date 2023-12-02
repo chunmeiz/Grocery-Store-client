@@ -13,7 +13,7 @@ import MainTable from './MainTable';
 export const Cart = () => {
     const columnTitles = ['customerName', 'products', 'createdAt'];
     const tableCaption = 'Cart table';
-    const url = 'http://localhost:3000/cartItems';
+    const url = 'https://grocery-store-server-u9gz.onrender.com/cartItems';
     return (
       <ChakraProvider>
           <Heading size='lg'>Cart</Heading>
