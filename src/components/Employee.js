@@ -12,7 +12,7 @@ import MainTable from './MainTable';
 export function Employee  ()  {
     const columnTitles = ['Empid', 'Username', 'Password'];
     const tableCaption = 'Employee table';
-    const url = 'http://localhost:3000/employeeItems';
+    const url = 'https://grocery-store-server-u9gz.onrender.com/employeeItems';
     return (
       <ChakraProvider>
           <Heading size='lg'>Employee</Heading>
