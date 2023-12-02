@@ -57,7 +57,7 @@ export function Login() {
        
         console.log({Username,Password});
         
-        fetch('http://localhost:3000/login',{
+        fetch('https://grocery-store-server-u9gz.onrender.com/login',{
             method:"POST",
             body:JSON.stringify({
                 Username,
