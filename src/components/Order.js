@@ -13,7 +13,7 @@ import MainTable from './MainTable';
 export const Order = () => {
     const columnTitles = ['OrderNo', 'OrderData', 'CustomerNo','ProductCode', 'ProductName', 'ProductQuantity', 'ProductPrice', 'Total', 'ModeOfPayment'];
     const tableCaption = 'Order table';
-    const url = 'http://localhost:3000/orderItems';
+    const url = 'https://grocery-store-server-u9gz.onrender.com/orderItems';
     return (
       <ChakraProvider>
           <Heading size='lg'>Order</Heading>
