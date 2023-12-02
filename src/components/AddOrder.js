@@ -69,7 +69,7 @@ export function AddOrder() {
             ModeOfPayment:data.ModeOfPayment
           }
           console.log(sendData);
-          fetch('http://localhost:3000/orderItems',{
+          fetch('https://grocery-store-server-u9gz.onrender.com/orderItems',{
               method:"POST",
               body:JSON.stringify(sendData),
               headers:{
