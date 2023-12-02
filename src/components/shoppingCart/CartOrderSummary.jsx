@@ -53,7 +53,7 @@ import {
          createdAt:formattedDate
        }
        console.log(sendData);
-       fetch('http://localhost:3000/cartItems',{
+       fetch('https://grocery-store-server-u9gz.onrender.com/cartItems',{
            method:"POST",
            body:JSON.stringify(sendData),
            headers:{
