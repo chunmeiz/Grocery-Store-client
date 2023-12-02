@@ -41,7 +41,7 @@ export function Home() {
   { ProductCode: 2, ProductName: 'Cornflakes', Product_price:20, ImageSrc: '/images/Cornflakes.jpg', description:'high fribr',currency:'USD',quantity:1 },
   { ProductCode: 4, ProductName: 'P_Biscuits', Product_price:30, ImageSrc: '/images/P_Biscuits.jpg',description:'crispy', currency:'USD',quantity:1 },
   { ProductCode: 9, ProductName: 'shampoo', Product_price:50, ImageSrc: '/images/shampoo.jpg', description:'fragrant', currency:'USD',quantity:1},
-  { ProductCode: 6, ProductName: 'Toothbrush', Product_price:60, ImageSrc: '/images/toothbrush.jpg', description:'manual',currency:'USD',quantity:1 },
+  { ProductCode: 6, ProductName: 'Toothbrush', Product_price:60, ImageSrc: '/images/Toothbrush.jpg', description:'manual',currency:'USD',quantity:1 },
   { ProductCode: 10, ProductName: 'Drink', Product_price:30, ImageSrc: '/images/Drink.jpeg' , description:'carbohydrate',currency:'USD',quantity:1},
 ] 
 
