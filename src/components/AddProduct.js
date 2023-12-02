@@ -56,7 +56,7 @@ export function AddProduct() {
               Product_price:data.Product_price
           }
           console.log(sendData);
-          fetch('http://localhost:3000/productItems',{
+          fetch('https://grocery-store-server-u9gz.onrender.com/productItems',{
               method:"POST",
               body:JSON.stringify(sendData),
               headers:{
