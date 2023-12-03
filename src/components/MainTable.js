@@ -97,6 +97,7 @@ export default function MainTable  (props)  {
     .then ((data)=>{
           alert( data.message);
           tableData[index]=data.updatedProductItem;
+          console.log(tableData);
          })   
        .catch((error) => {
         console.error('Error:', error);
