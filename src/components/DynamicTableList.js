@@ -2,6 +2,35 @@ import React from 'react';
 import { Table, TableCaption, Thead, Tbody, Tr, Th, Td, Input , Button } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
+const ProductItem = ({ products }) => (
+  <Table style={{ background: 'none' }}>
+    <Thead>
+      <Tr>
+        <Th>ID</Th>
+        <Th>Price</Th>
+        <Th>Currency</Th>
+        <Th>Name</Th>
+        <Th>Description</Th>
+        <Th>Quantity</Th>
+        <Th>Image URL</Th>
+      </Tr>
+    </Thead>
+    <Tbody>
+      {products.map((product, index) => (
+        <Tr key={index}>
+          <Td>{product.id}</Td>
+          <Td>${product.price}</Td>
+          <Td>{product.currency}</Td>
+          <Td>{product.name}</Td>
+          <Td>{product.description}</Td>
+          <Td>{product.quantity}</Td>
+          <Td>{product.imageUrl}</Td>
+        </Tr>
+      ))}
+    </Tbody>
+  </Table>
+);
+
 export default function  DynamicTableList  ({ 
   tableCaption,
   tableData,
@@ -18,7 +47,7 @@ export default function  DynamicTableList  ({
   isLoggedIn,
   token
  }) {
- console/log(tableData);
+
   // Assuming tableData is not empty
   const columns = tableData &&tableData.length > 0 ? Object.keys(tableData[0]) : [];
 // Now 'columns' contains all the keys of the first object in tableData
@@ -43,9 +72,12 @@ export default function  DynamicTableList  ({
             <Tr key={rowIndex}>
               {columns.map((column, colIndex) => (
                 // Skip rendering the first column
-                colIndex !== 0 && (
+                  colIndex !== 0 && (
                 <Td key={colIndex}>
-                  {editingRow === rowIndex ? (
+                  {column === 'products' ? (
+                     <ProductItem products={row[column]} />
+                   ):
+                 editingRow === rowIndex ? (
                     <Input
                       variant="filled"
                       focusBorderColor="blue.500"
@@ -56,8 +88,9 @@ export default function  DynamicTableList  ({
                     <span>{row[column]}</span>
                   )}
                 </Td>
-                )
+                 )
               ))}
+
               <Td>
               {(isLoggedIn)?(
                   editingRow === rowIndex ? (
