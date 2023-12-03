@@ -20,7 +20,7 @@ export default function  DynamicTableList  ({
  }) {
 
   // Assuming tableData is not empty
-  const columns = tableData.length > 0 ? Object.keys(tableData[0]) : [];
+  const columns = tableData &&tableData.length > 0 ? Object.keys(tableData[0]) : [];
 // Now 'columns' contains all the keys of the first object in tableData
   console.log(token);
   const navigate = useNavigate();
