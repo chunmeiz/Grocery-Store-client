@@ -179,13 +179,13 @@ const handleCancelDeleteClick = () => {
         setTableData(response.data); 
       })
     //  }
-  }, [editingRow]); 
+  }, [tableData]); 
 
 
   useEffect(() => {
     console.log("tableData has been updated:", tableData);
     // Additional logic or side effects you want to perform after tableData is updated
-  }, [editingRow]);
+  }, [tabelData]);
 
  console.log(token);
 // ------------------------------------------------------------
