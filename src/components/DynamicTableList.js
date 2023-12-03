@@ -18,7 +18,7 @@ export default function  DynamicTableList  ({
   isLoggedIn,
   token
  }) {
-
+ console/log(tableData);
   // Assuming tableData is not empty
   const columns = tableData &&tableData.length > 0 ? Object.keys(tableData[0]) : [];
 // Now 'columns' contains all the keys of the first object in tableData
