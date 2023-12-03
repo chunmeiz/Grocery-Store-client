@@ -63,7 +63,7 @@ export default function MainTable  (props)  {
 
   }
 
-  const editProduct= async(index) =>{
+  const editProduct= (index) =>{
    
      const editedProduct = tableData[index];
      console.log(editedProduct._id);
@@ -76,7 +76,7 @@ export default function MainTable  (props)  {
        return;
      }
 
- await fetch(`${url}/${editedProduct._id}`,{
+  fetch(`${url}/${editedProduct._id}`,{
         method:"PUT",
         body:JSON.stringify(
           editedProduct
