@@ -110,10 +110,10 @@ export default function MainTable  (props)  {
     setEditingRow(index);
   };
 
-  const handleSaveClick = (index) => {
+  const handleSaveClick = async (index) => {
     
     // Handle saving the edited values, e.g., send them to the server
-    editProduct(index);
+   await editProduct(index);
     // After saving, you can update the state or perform any other necessary actions
     setEditingRow(null);
     setEditedValues({});
