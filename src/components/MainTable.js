@@ -96,6 +96,7 @@ export default function MainTable  (props)  {
     })
     .then ((data)=>{
           alert( data.message);
+          console.log(data.updatedProductItem);
           tableData[index]=data.updatedProductItem;
           console.log(tableData);
           setTableData(tableData);
